@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" href="images/logo1.jpg">
+		<title>Spring</title>
+		<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+		<script src="../js/spring.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../css/spring.css"/>
+		<style>
+			#banner {
+				background: url(images/spring.jpg) no-repeat;
+				width: 100%;
+				height: 100vh;
+				position: relative;
+				background-size: cover;
+				background-color: black;
+				/* -webkit-mask: -webkit-linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)); */
+				/* -webkit-filter: blur(20px);  /* chrome, opera */
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="banner">
+			<div class="inner"></div>
+			<div id="banner_title">
+				<h1>Spring Equinox</h1>
+				<h6>The 24 Solar Terms</h6>
+			</div>
+		</div>
+
+		<div id="nav">
+			<div id="bar">
+				<div onclick="homepage()" id="LOGO"><img src="images/shouye1.jpg" /></div>
+				<div>
+					<ul>
+						<li><a href="spring.html">Spring</a></li>
+						<li><a href="summer.html">Summer</a></li>
+						<li><a href="autumn.html">Autumn</a></li>
+						<li><a href="winter.html">Winter</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div id="header">
+			<div id="headerResume">
+				<h1>Spring Equinox</h1>
+				<div>
+					<p>立春（2月3-5日）</p>
+					<p>	天气开始回暖，万物复苏。春耕准备，树木开始发芽。</p>
+					<p>雨水（2月18-20日）</p>
+					<p>降水量增加，空气湿润，气温稳步回升，适合农田播种。</p>
+					<p>惊蛰（3月5-7日）</p>
+					<p>春雷初鸣，气温显著上升，昆虫苏醒，土壤解冻。</p>
+					<p>春分（3月20-22日）</p>
+					<p>昼夜平分，气候温和，春耕全面展开，麦苗返青。</p>
+					<p>清明（4月4-6日）</p>
+					<p>天气清爽，降水增多，适宜植树造林和播种作物。</p>
+					<p>谷雨（4月19-21日）</p>
+					<p>降雨频繁，谷类作物开始生长，春播基本完成。</p>
+				</div>
+			</div>
+			<img src="images/chuntian.jpg" />
+		</div>
+
+		<div id="clear"></div>
+
+		<div id="divides">
+			<h3>SPRING</h3>
+			<p>The six solar terms in spring</p>
+		</div>
+		<div class="img_content">
+			<ul id="img">
+				<li><img src="images/lichun.jpg" /> </li>
+				<li><img src="images/yushui.jpg" /> </li>
+				<li><img src="images/jingzhe.jpg" /> </li>
+				<li><img src="images/chunfen2.jpg" /> </li>
+				<li><img src="images/qingming.jpg" /> </li>
+				<li><img src="images/guyu.jpg" /> </li>
+			</ul>
+		</div>
+		<script type="text/javascript"> 
+		function scrollLeft() {
+		var img = document.getElementById('img');
+			/*先向左移动一个图片的宽度  移动后在末尾追加第一个元素 然后将第一个元素移除 */
+			$('#img').animate({
+				left: -320
+			}, 1000, function() {
+				$('#img').append($('#img li:first').clone());
+				$('#img li:first').remove();
+			});
+		
+			/*将left值置为0*/
+			$('#img').animate({
+				left: 0
+			}, 0);
+		}
+		var timer = null;
+		function a(){
+			timer = setInterval(scrollLeft, 2500);
+		}
+		 
+		 img.onmouseover = function() {
+		  	clearInterval(timer);
+		 };
+		 img.onmouseout = a;
+		 a();
+		 
+		</script>
+
+		<div id="divides">
+			<h3>Do you want to destroy spring?</h3>
+		</div>
+
+
+		<div id="bottom">
+			<div id="album">
+				<div id="1" class="Album_box" onclick="Album_openbox(1)">
+					<img src="images/制造全球核污染.jpg" />
+					"制造全球性核污染"
+				</div>
+				<div id="2" class="Album_box" onclick="Album_openbox(2)">
+					<img src="images/大气层工程破坏.jpg" />
+					"大气层工程破坏"
+				</div>
+				<div id="3" class="Album_box" onclick="Album_openbox(3)">
+					<img src="images/排放人工温室气体.jpg" />
+					"排放人工温室气体"
+				</div>
+				<div id="4" class="Album_box" onclick="Album_openbox(4)">
+					<img src="images/加速冰川融化.jpg" />
+					"加速冰川融化"
+				</div>
+				<div id="5" class="Album_box" onclick="Album_openbox(5)">
+					<img src="images/大规模森林焚毁.jpg" />
+					"大规模森林焚烧"
+				</div>
+			</div>
+			<div id="clear"></div>
+		</div>
+		<div id="pop_bg"></div>
+			<div id="pop1" class="pop"  style="border: solid #ff0000 8px;">
+				<img id="popImg" src="images/制造全球核污染.jpg" />
+				<div id="popText">
+					<h2>“制造全球性核污染”</h2>
+					<ul>
+						<li>DANGEROUS</li>
+						<li>DANGEROUS</li>
+					</ul>
+					<p>通过频繁进行核试验或随意倾倒核废料，大量放射性物质进入环境，造成土壤、空气和水体的长期污染。</p>
+					<p>放射性物质对生态系统具有高度破坏性，导致植物无法生长、动物灭绝，并使大片土地数千年内都无法居住或使用。</p>
+				</div>
+				<img id="exit" src="images/exit.png" onclick="Album_closebox(1)" />
+			</div>
+			<div id="pop2" class="pop" style="border: solid #ff0000 8px;">
+				<img id="popImg" src="images/大气层工程破坏.jpg" />
+				<div id="popText">
+					<h2>“大气层工程破坏”</h2>
+					<ul>
+						<li>DANGEROUS</li>
+						<li>DANGEROUS</li>
+					</ul>
+					<p>通过释放化学物质（如氟利昂）破坏臭氧层，直接让地球暴露在紫外线的威胁下。</p>
+					<p>臭氧层的破坏会增加皮肤癌和白内障发病率，同时破坏植物的光合作用，进一步威胁粮食安全和生态系统平衡。</p>
+				</div>
+				<img id="exit" src="images/exit.png" onclick="Album_closebox(2)" />
+			</div>
+			<div id="pop3" class="pop" style="border: solid #ff0000 8px;">
+				<img id="popImg" src="images/排放人工温室气体.jpg" />
+				<div id="popText">
+					<h2>"排放人工温室气体"</h2>
+					<ul>
+						<li>DANGEROUS</li>
+						<li>DANGEROUS</li>
+					</ul>
+					<p>制造并大量排放高效温室气体（如六氟化硫、氢氟碳化物等），显著提高地球大气中温室气体浓度。</p>
+					<p>其结果是全球气温迅速上升，导致极端天气增多、海平面上升和农业生态系统失衡。</p>
+				</div>
+				<img id="exit" src="images/exit.png" onclick="Album_closebox(3)" />
+			</div>
+			<div id="pop4" class="pop" style="border: solid #ff0000 8px;">
+				<img id="popImg" src="images/加速冰川融化.jpg" />
+				<div id="popText">
+					<h2>”加速冰川融化“</h2>
+					<ul>
+						<li>DANGEROUS</li>
+						<li>DANGEROUS</li>
+					</ul>
+					<p>利用人造热源、工业设施或矿产开发直接对极地冰盖进行加热，造成冰川快速融化。</p>
+					<p>冰川的消融会释放大量封存的甲烷，加剧气候变暖，同时导致海平面上升，淹没沿海城市和低洼地区。</p>
+				</div>
+				<img id="exit" src="images/exit.png" onclick="Album_closebox(4)" />
+			</div>
+			<div id="pop5" class="pop" style="border: solid #ff3232 8px;">
+				<img id="popImg" src="images/大规模森林焚毁.jpg" />
+				<div id="popText">
+					<h2>”大规模森林焚烧“</h2>
+					<ul>
+						<li>DANGEROUS</li>
+						<li>DANGEROUS</li>
+					</ul>
+					<p>通过系统性焚毁热带雨林和温带森林，不仅释放巨量的二氧化碳，加剧温室效应，还彻底摧毁野生生物的栖息地，导致物种大规模灭绝。森林的消失还会引发土壤侵蚀、水循环中断和局地气候失衡。</p>
+				</div>
+				<img id="exit" src="images/exit.png" onclick="Album_closebox(5)" />
+			</div>
+		
+	</body>
+</html>
